@@ -105,7 +105,7 @@ p,
 
 .label {
   margin-bottom: clamp(0.75rem, 0.751vw + 0.574rem, 1.25rem);
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   letter-spacing: 5px;
   text-transform: uppercase;
 }
