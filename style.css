@@ -1,0 +1,173 @@
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* font-family: "Fraunces", serif; */
+/* font-family: "Montserrat", sans-serif; */
+
+/* MY CSS */
+
+:root {
+  --primary: hsl(158, 36%, 37%);
+  --secondary: hsl(30, 38%, 92%);
+  --neutral-800: hsl(212, 21%, 14%);
+  --neutral-400: hsl(228, 12%, 48%);
+  --neutral-100: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--secondary);
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  max-width: 37.5rem;
+  background-color: var(--neutral-100);
+  margin: 0 1rem;
+  border-radius: 10px;
+  display: grid;
+  align-items: center;
+  place-content: center;
+}
+
+.text-wrapper {
+  padding: clamp(1.5rem, 0.751vw + 1.324rem, 2rem);
+  border-radius: 0 0 10px 10px;
+}
+
+img {
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+p {
+  margin-bottom: clamp(1.5rem, 0.563vw + 1.368rem, 1.875rem);
+}
+
+p,
+.price-crossed {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--neutral-400);
+}
+
+.label {
+  margin-bottom: clamp(0.75rem, 0.751vw + 0.574rem, 1.25rem);
+  font-size: 0.5rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: clamp(1rem, 0.751vw + 0.824rem, 1.5rem);
+  color: var(--neutral-800);
+}
+
+h2,
+.price {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  line-height: 2rem;
+  font-size: 2rem;
+}
+
+.price {
+  margin-bottom: clamp(1.25rem, 0.939vw + 1.03rem, 1.875rem);
+  color: var(--primary);
+  display: flex;
+  gap: 1.25rem;
+}
+
+.price-crossed {
+  text-decoration: line-through;
+}
+
+button {
+  all: unset;
+}
+
+.button {
+  background-color: var(--primary);
+  min-width: 100%;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--neutral-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #1a4032;
+}
+
+@media screen and (min-width: 37.5rem) {
+  article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  img {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .text-wrapper {
+    border-radius: 0 10px 10px 0;
+  }
+}
